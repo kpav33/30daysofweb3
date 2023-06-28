@@ -20,3 +20,33 @@
 * **Gas fees** are something that all users must pay in order to perform a function on the blockchain. The amount of gas required to pay varies depending on which blockchain you’re using, as well as other factors like high traffic.
 * Once the transaction has been requested, it gets authenticated and added to a **block** (block is composed of a set of transaction across the blockchain). Once blocks maximum capacity is reached, the block is closed and linked to previously filled block. The block is sent out to the entirety of the network's **nodes** (participants on the blockchain).
 * Then nodes validate the transaction and receive an award for participating in the validation process. With validation complete, the block gets added to the official blockchain. Afterward, the blockchain receives an update across the entire network and officially reflects that transaction. The transaction is now complete.
+
+## Intro to Smart Contracts
+
+* A **smart contract** is a computer program compiled from code that can control events and actions according to the terms set within the contract’s code
+* Smart contracts can be programmed to accept payment and return an item in place of that payment (like minting an NFT - **Minting** is the process of taking a digital asset like a photo and publishing that asset to the blockchain).
+* Similar example of smart contract accepting a payment and returning an item is Uniswap decentralized cryptocurrency exchange, each time a user goes to exchange one crypto currency for another a smart contract function is triggered, which accepts user's payment and then sends them the requested currency.
+
+## Intro to Crypto Wallets
+
+* A **crypto wallet** is a storage system for your digital assets like cryptocurrencies, NFTs, and more. The contents of each crypto wallet can be accessed by a unique key made of a combination of letters and numbers explicitly assigned to the wallet’s creator (called a **private key**)
+* Each crypto wallet also has a **public key**, which the public address of the user's wallet. Anyone can use the public key to look up and verify transaction information.
+* There are **digital** (MetaMask, Coinbase wallet...) and **hardware** (physical devices that store and protect your private keys) wallets.
+* **Hot wallets** are very convenient, because they can be accessed via web, mobile or desktop devices, but since they are always online, they are the most vulnerable to attacks.
+* For best safety **cold wallets** are reccommended (hardware devices that require physical input to unlock). They are less convenient and accessible, but provice best security.
+
+# Building on Ethereum
+
+## Client Server Architecture
+* A client application is the one that a user is actually interacting with, that's displaying the content. A server application is the one that sends the content, or resource, to your client application.
+* Main reason for this separation is to secure any sensitive information, since client application gets downloaded to the browser and that data can be accessed by anyone. With modern tools like Next.js you can run server code in the same app as client code, without needing separate server application.
+* If all of the code would have to run on the client, this would make the app bloated and slow, which is why we often use APIs that send specific request to the server and in return servers process the request and send back only the specific code that they need.
+* In Blockchain development we have open and compasable backends (smart contracts). Client application is in charge of aggregating and displaying all of the data that user needs to use and smart contract provides the backend to execute the necessary actions.
+
+## Intro to Polygon
+* With Ethereum blockchain gaining on popularity as the most used blockchain for smart contract projects, there was considerable network congestion and high gas fees.
+* **L1 Blockchain** refers to the main blockchain layer such as Ethereum. Layer1 scaling solutions are implemented directly on the main blockchain, thus deriving the name on-chain solutions.
+* **L2 Blockchains** are add-on solutions built on the base layer. Thus deriving the name off-chain scaling solution, since they intend to take away workload from the blockchain while utilizing its security.
+* **Sidechains** are Ethereum-compatible independent blockchains with their own consensus model. Sidechains achieve interoperability with Ethereum by the use of the same EVM. Since they are independent from the main-chain, side chains are responsible for their own security. If a sidechain’s security is compromised, it will pose no impact to the mainchain (example Polygon).
+* **Polygon** is a scaling solution that achieves scale by utilizing sidechains for off-chain computation and a decentralized network of Proof-of-Stake (PoS) validators.
+* Ethereum can be slow and costly. Sidechains such as Polygon were created as a solution to speed up the blockchain while making minimal sacrifices on security and decentralization thus an improved user experience and reduced network congestion.
