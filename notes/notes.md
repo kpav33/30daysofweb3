@@ -50,3 +50,9 @@
 * **Sidechains** are Ethereum-compatible independent blockchains with their own consensus model. Sidechains achieve interoperability with Ethereum by the use of the same EVM. Since they are independent from the main-chain, side chains are responsible for their own security. If a sidechain’s security is compromised, it will pose no impact to the mainchain (example Polygon).
 * **Polygon** is a scaling solution that achieves scale by utilizing sidechains for off-chain computation and a decentralized network of Proof-of-Stake (PoS) validators.
 * Ethereum can be slow and costly. Sidechains such as Polygon were created as a solution to speed up the blockchain while making minimal sacrifices on security and decentralization thus an improved user experience and reduced network congestion.
+
+## Intro to Solidity
+* The language used to build and deploy smart contracts on Ethereum and multiple other chains is called Solidity
+* A contract in Solidity is similar to class in object oriented programming languages. It is a collection of code made up of a constructor, variables, and functions.
+* General outline of a smart contract => Source code license, Solidity version, contract, contract variables and functions (getters and setters)
+* Every function has a name and potential inputs, we also state the visibility of the function (public, private), whether the function modifies blockchain data or just views it and what if anything function returns after executing
