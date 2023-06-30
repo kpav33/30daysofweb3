@@ -4,11 +4,18 @@ const hre = require("hardhat");
 
 // Main function
 const main = async () => {
+  console.log("START");
   // Deploy the contract locally with hardhat
   const rsvpContractFactory = await hre.ethers.getContractFactory("Web3RSVP");
+  //   console.log("1 ", rsvpContractFactory);
   const rsvpContract = await rsvpContractFactory.deploy();
+  //   const rsvpContract = await rsvpContractFactory.deployContract();
+  //   console.log("2 ", rsvpContract);
+  //   console.log(rsvpContract);
   await rsvpContract.deployed();
+  //   await rsvpContract.waitForDeployment();
   console.log("Contract deployed to:", rsvpContract.address);
+  //   console.log("Contract deployed to:", rsvpContract.getAddress());
 
   // Hardhat gives us different test wallets so we can simulate contract interaction
   // To get deployer wallet address and couple others for testing we use the getSingers method
