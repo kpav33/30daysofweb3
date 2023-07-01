@@ -7,27 +7,36 @@ const main = async () => {
   console.log("START");
   // Deploy the contract locally with hardhat
   const rsvpContractFactory = await hre.ethers.getContractFactory("Web3RSVP");
-  //   console.log("1 ", rsvpContractFactory);
+  // console.log("1 ", rsvpContractFactory);
   const rsvpContract = await rsvpContractFactory.deploy();
   //   const rsvpContract = await rsvpContractFactory.deployContract();
-  //   console.log("2 ", rsvpContract);
+  // console.log("2 ", rsvpContract);
   //   console.log(rsvpContract);
-  await rsvpContract.deployed();
-  //   await rsvpContract.waitForDeployment();
-  console.log("Contract deployed to:", rsvpContract.address);
-  //   console.log("Contract deployed to:", rsvpContract.getAddress());
+  // console.log("rsvpContract.deployed()");
+  // await rsvpContract.deployed();
+  // console.log(await rsvpContract.waitForDeployment());
+  // console.log("OOOOOOOOOOOOOOOOOOOKKKKKKKKKKKKKKKKKKKKKKKK");
+  // console.log("ADDRESS ", await rsvpContract.getAddress());
+  await rsvpContract.waitForDeployment();
+  // console.log("Contract deployed to:", rsvpContract.address);
+  console.log("Contract deployed to:", await rsvpContract.getAddress());
 
   // Hardhat gives us different test wallets so we can simulate contract interaction
   // To get deployer wallet address and couple others for testing we use the getSingers method
   const [deployer, address1, address2] = await hre.ethers.getSigners();
+  // console.log(address1, address2);
 
   // Mock data
-  let deposit = hre.ethers.utils.parseEther("1");
+  // let deposit = hre.ethers.utils.parseEther("1");
+  let deposit = hre.ethers.parseEther("1");
   let maxCapacity = 3;
   let timestamp = 1718926200;
   let eventDataCID =
     "bafybeibhwfzx6oo5rymsxmkdxpmkfwyvbjrrwcl7cekmbzlupmp5ypkyfi";
 
+  // console.log(deposit, maxCapacity, timestamp, eventDataCID);
+
+  console.log("rsvpContract ", rsvpContract);
   // Create a new event with mock data
   let txn = await rsvpContract.createNewEvent(
     timestamp,
@@ -36,9 +45,18 @@ const main = async () => {
     eventDataCID
   );
 
+  console.log("--------------------");
+  console.log("TXN ", txn);
+  console.log("--------------------");
+
   // Once the transaction is finished this will return transaction data including an array of emitted events
   let wait = await txn.wait();
-  console.log("NEW EVENT CREATED:", wait.events[0].event, wait.events[0].args);
+  console.log("WAIT ", wait?.events);
+  console.log(
+    "NEW EVENT CREATED:",
+    wait?.events[0].event,
+    wait?.events[0].args
+  );
 
   // We can save the eventId so we can use it later
   let eventID = wait.events[0].args.eventID;
