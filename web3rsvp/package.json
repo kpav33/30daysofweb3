@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "script": "node scripts/run.js"
+    "script": "node scripts/run.js",
+    "deploy": "npx hardhat run scripts/deploy.js --network mumbai"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "hardhat": "^2.16.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }

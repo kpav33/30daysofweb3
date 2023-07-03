@@ -56,3 +56,8 @@
 * A contract in Solidity is similar to class in object oriented programming languages. It is a collection of code made up of a constructor, variables, and functions.
 * General outline of a smart contract => Source code license, Solidity version, contract, contract variables and functions (getters and setters)
 * Every function has a name and potential inputs, we also state the visibility of the function (public, private), whether the function modifies blockchain data or just views it and what if anything function returns after executing
+
+# Deploying Your Smart Contract
+
+## Deploying with Infura
+* Infura is a company that provides web3 infrastructure tools that allow developers to develop on a blockchain. Infura provides the nodes that are the entry point to the blockchain and allow you to execute transactions. Without a node provider like Infura, a developer would have to run their own node to communicate with the blockchain, which can be expensive, difficult, and time consuming.
