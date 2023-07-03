@@ -69,3 +69,8 @@
 * We define a Schema for our GraphQL queries that defines what sort of actions we will be able to perform.
 * The subgraph manifest (subgraph.yaml) is where you can define settings for the subgraph.
 * Mappings use AssemblyScript, a strongly-typed language based on Typescript, and act like the resolvers in your typical GraphQL API. They are responsible for the logic that happens in-between an event firing from our smart contract and that data being organized into our schema.
+
+# Building your frontend
+
+## Web3storage
+* Web3.Storage is an easy-to-use API that enables users to store and retrieve data from Filecoin, a decentralized storage network built upon IPFS that allows anyone to buy and sell unused storage space. IPFS (InterPlanetary File System) is a peer-to-peer distributed file-sharing system for storing and sharing content like data, files, websites, and applications.
