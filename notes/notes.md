@@ -74,3 +74,10 @@
 
 ## Web3storage
 * Web3.Storage is an easy-to-use API that enables users to store and retrieve data from Filecoin, a decentralized storage network built upon IPFS that allows anyone to buy and sell unused storage space. IPFS (InterPlanetary File System) is a peer-to-peer distributed file-sharing system for storing and sharing content like data, files, websites, and applications.
+
+## Ethers.js
+* Ethers.js is a JavaScript library allowing developers to easily interact with the Ethereum blockchain and its ecosystem.
+* Ethers Wallet Container applications live inside an iframe which sandboxes them from each other and from private data (such as private keys).
+* For read-only operations, the application connects to the Ethereum blockchain directly.
+* For writing to the blockchain, the dApp passes messages and transactions to the container and relinquishes control of the application. Once the user has approved (or declined) the transaction, control is returned to the dApp and a signed copy of the message or transaction is passed back.
+* The Ethers App Library handles all this interaction for you.
