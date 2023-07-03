@@ -61,3 +61,11 @@
 
 ## Deploying with Infura
 * Infura is a company that provides web3 infrastructure tools that allow developers to develop on a blockchain. Infura provides the nodes that are the entry point to the blockchain and allow you to execute transactions. Without a node provider like Infura, a developer would have to run their own node to communicate with the blockchain, which can be expensive, difficult, and time consuming.
+
+# Creating Your Subgraph
+
+## Intro to the Graph
+* The Graph is a web3 protocol that allows developers to create GraphQL APIs to query data from any smart contract. Anyone can deploy their own API, also called a subgraph.
+* We define a Schema for our GraphQL queries that defines what sort of actions we will be able to perform.
+* The subgraph manifest (subgraph.yaml) is where you can define settings for the subgraph.
+* Mappings use AssemblyScript, a strongly-typed language based on Typescript, and act like the resolvers in your typical GraphQL API. They are responsible for the logic that happens in-between an event firing from our smart contract and that data being organized into our schema.
