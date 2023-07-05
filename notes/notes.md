@@ -81,3 +81,20 @@
 * For read-only operations, the application connects to the Ethereum blockchain directly.
 * For writing to the blockchain, the dApp passes messages and transactions to the container and relinquishes control of the application. Once the user has approved (or declined) the transaction, control is returned to the dApp and a signed copy of the message or transaction is passed back.
 * The Ethers App Library handles all this interaction for you.
+
+# Wrapping Up
+
+## Lens Protocol
+
+* The Lens Protocol is a decentralized social graph that allows developers to build social media platforms and profiles. A **social graph** is a collection of nodes that represent individual users, organizations, and any connections between those nodes.
+* Lens Protocol has a toolkit consisting of different modules, which you can use the build your dApp (the modules are Profile, Post, Collect, Mirror, Follow, Comment).
+* Using Lens, users can sign into a growing collection of dApps and services that are built on the Lens Protocol.
+
+## Radicle
+* Radicle is a peer-to-peer network for storing git repositories designed to be free from censorship. You can use Radicle for free similarly to how you would use GitHub or any other git based repository hosting site.
+* The major benefit to using Radicle is that it is a decentralized protocol rather than a centralized platform. This means that there can be no single point of failure that results in the loss or censorship of your content.
+
+## Sum Up
+* You can deploy your dApps on Polygon, which provides faster and cheaper transactions with less network congestion. The InterPlanetary File System (IPFS) protocol will help you in storing, sharing, and retrieving data for your dApps.
+* You can use Ethers.js to interact with dApps with the blockchain ecosystem from your frontend applications. The Graph protocol will allow querying data from smart contracts via GraphQL APIs.
+* Finally you can host your code on Radicle, which allows storing git repositories for code collaboration that is free from censorship.
